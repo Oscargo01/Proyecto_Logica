@@ -15,7 +15,7 @@ w = 4
 c = [[0 for x in range(w)] for y in range(w)]
 for i in range(0,4):
     for j in range(0,4):
-        c[i][j] = letras[i*(4)+j] 
+        c[i][j] = letras[i*(4)+j]
 c2 = np.array(c)
 tras = c2.transpose()
 #Creamos el primer terreno de 4x4, este terreno esta vacio. Además se guarda la imagen
@@ -31,7 +31,7 @@ for i in range(1,5):
     for j in range(1,5):
         if diccionario.get(tras[i-1][j-1])==1:
             ax = fig2.add_subplot(4, 4,k, xticklabels=[], yticklabels=[], xticks=[], yticks=[])  
-            plt.text(0.2, 0.4,tras[i-1][j-1])
+            plt.text(0.2, 0.4,tras[i-1][j-1].split(",")[1].split(")")[0])
         elif diccionario.get(tras[i-1][j-1]) == 0:
             ax = fig2.add_subplot(4, 4,k, xticklabels=[], yticklabels=[], xticks=[], yticks=[])  
             plt.text(0.2, 0.4,' ')
